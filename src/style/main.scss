@@ -95,13 +95,16 @@ body {
 	padding-bottom: 64px;
 	padding-top: 92px;
 	background-color: #fff;
+	position: relative;
+	margin-bottom: 55px;
 }
 
 .tovar-elem__left{
-	width: 50%;
+	width: 46%;
+	position: relative;
 }
 .tovar-elem__right{
-	width: 50%;
+	width: 54%;
 }
 .tovar-elem__slider{
 	width: 500px;
@@ -151,10 +154,14 @@ body {
 	position: absolute;
 }
 .tovar-elem__sliderbot .slick-list{
-	width: 420px;
+	width: 421px;
 }
 .tovar-elem__sliderbot .slick-arrow:hover{
 	zoom: 1.1;
+}
+.tovar-elem__sliderbot .slick-arrow.slick-disabled{
+	opacity: 0.5;
+	pointer-events: none;
 }
 .tovar-elem__sliderbot .slick-prev{
 	transform: rotateY(180deg) translateY(-50%);
@@ -324,6 +331,29 @@ body {
 	line-height: 26px;
 	color: #FFFFFF;
 }
+.tovar-buy-bnt.link{
+	display: none;
+	background-color: #7700FF;
+	margin-bottom: 11px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+.tovar-buy-bnt.link:before {
+    content: "";
+    margin-right: 15px;
+    width: 23px;
+    height: 23px;
+    background: url(../img/icon/shopping-cart-white.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.tovar-buy{
+	display: flex;
+	flex-direction: column;
+}
 .tovar-buy button{
 	margin-bottom: 11px;
 }
@@ -428,12 +458,15 @@ body {
 	color: #353535;
 	margin-right: 14px;
 	text-align: center;
+	transition: 0.3s all;
 }
 .change-hard__item.active{
 	background: #7700FF;
 	color: #FFFFFF;
 }
-
+.change-hard__item:hover{
+	box-shadow: 0 0 2px rgba(0,0,0, 0.5) inset;
+}
 .tovar-elem__line4{
 	display: flex;
 	flex-wrap: wrap;
@@ -503,4 +536,340 @@ body {
 }
 .harakt a:hover{
 	text-decoration: underline;
+}
+
+.tovar-label{
+	position: absolute;
+	left: -56px;
+	top: 0px;
+	z-index: 2;
+}
+.tovar-label a{
+	height: 35px;
+	font-size: 16px;
+	line-height: 32px;
+	color: #7700FF;
+	padding: 0 23px;
+	text-decoration: none;
+	border: 1px solid #7700FF;
+	display: inline-block;
+	background-color: #fff;
+}
+.tovar-label a:hover{
+	box-shadow: 0 0 5px rgba(0,0,0, 0.2);
+}
+.tovar-label div{
+	background: #7700FF;
+	border-radius: 5px 0px 0px 0px;
+	font-size: 16px;
+	line-height: 32px;
+	color: #fff;
+	padding: 0 23px;
+	position: relative;
+	text-align: center;
+	margin-bottom: 24px;
+	left: -15px;
+	width: 129px;
+}
+.tovar-label div:before{
+	content: "";
+	width: 15px;
+	display: block;
+	height: 15px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../img/icon/akciya.svg');
+	position: absolute;
+	top: 98%;
+	left: 0;
+}
+
+@media(max-width: 1599px){
+	.tovar .container{
+		padding: 0 15px;
+	}
+}
+@media(max-width: 1399px){
+	.tovar-elem__left{
+		width: 55%;
+	}
+	.tovar-elem__right{
+		width: 45%;
+	}
+}
+
+@media(max-width: 1199px){
+	.tovar .container{
+		max-width: 960px;
+	}
+	
+	.tovar-elem__wrap{
+		flex-direction: column;
+	}
+
+	.tovar-elem__left{
+		width: 100%;
+	}
+	.tovar-elem__right{
+		width: 100%;
+	}
+	.tovar-elem{
+		padding-top: 25px;
+	}
+	.tovar-elem__line1{
+		margin-bottom: 40px;
+	}
+	.tovar-elem__left{
+		margin-bottom: 30px;
+	}
+	.tovar-elem__right{
+		display: flex;
+		flex-direction: column;
+	}
+	.tovar-elem__line3{
+		order: 1;
+	}
+	.tovar-elem__line2{
+		order: 2;
+	}
+	.tovar-elem__line4{
+		order: 3;
+		border-bottom: 0;
+	}
+	.tovar-elem__line5{
+		display: none;
+	}
+	.rostrocha-text{
+		display: none;
+	}
+}
+
+@media(max-width: 991px){
+	.tovar-elem__line4{
+		flex-direction: column;
+	}
+	.tovar-elem__slider{
+		width: 100%;
+	}
+	.tovar-elem__line4{
+		margin-top: 40px;
+	}
+}
+
+@media(max-width: 767px){
+	.tovar-elem__sliderbot{
+		display: none;
+	}
+	.tovar-elem__item{
+		height: 320px;
+	}
+	.tovar-elem{
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 20px;
+	}
+	.tovar-elem__mame{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.tovar-elem__line1{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.tovar-elem__right{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.tovar-label{
+		left: 0px;
+	}
+	.tovar-label a{
+		padding: 0 10px;
+	}
+	.tovar-label div{
+		display: none;
+	}
+
+	.tovar-elem__mame{
+		font-size: 20px;
+		line-height: 20px;
+		color: #000000;
+	}
+	.tovar-elem__articul{
+		font-size: 14px;
+		line-height: 18px;
+		width: auto;
+	}
+	.rating__wrap > span{
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.tovar-elem__line1{
+		justify-content: space-between;
+	}
+	.tovar-label a{
+		font-size: 12px;
+		line-height: 25px;
+		height: 25px;
+		width: 72px;
+	}
+	.tovar-elem__slider{
+		width: 250px;
+	}
+
+	.tovar-elem__price{
+		font-size: 30px;
+		line-height: 39px;
+	}
+	.tovar-elem__oldprice{
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.tovar-elem__price{
+		flex: 0 0 50%;
+
+	}
+	.tovar-buy{
+		flex: 0 0 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.tovar-buy-bnt{
+		width: 200px;
+	}
+	.rostrocha-btn{
+		width: 200px;
+	}
+
+	.tovar-elem__slider .slick-dots{
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.tovar-elem__slider .slick-dots li{
+		list-style: none;
+		font-size: 0;
+		margin: 0 4px;
+	}
+	.tovar-elem__slider .slick-dots li button{
+		font-size: 0;
+		width: 11px;
+		height: 11px;
+		background-color: transparent;
+		border: 1px solid #7700FF;
+		border-radius: 100%;
+	}
+	.tovar-elem__slider .slick-dots li.slick-active button{
+		background-color: #7700FF;
+	}
+	.tovar-elem__line3{
+		margin-top: 0;
+	}
+	.tovar-elem__right{
+		border-top: 1px solid #B1B1B1;
+		padding-top: 31px;
+	}
+	.line4__item{
+		margin-bottom: 20px;
+	}
+}
+
+@media(max-width: 559px){
+	.tovar-elem__line3{
+		flex-direction: column;
+	}
+	.change-color{
+		flex: 0 0 100%;
+		margin-bottom: 25px;
+	}
+	.tovar-elem__line2{
+		margin-top: 54px;
+	}
+}
+
+@media(max-width: 424px){
+	.tovar-elem__slider{
+		width: 190px;
+	}
+	.tovar-elem__item{
+		height: 265px;
+	}
+	.rostrocha-btn{
+		width: 175px;
+	}
+	.tovar-buy-bnt{
+		width: 175px;
+	}
+	.rostrocha-btn{
+		font-size: 16px;
+	}
+}
+
+@media(max-width: 374px){
+	.tovar-elem{
+		zoom: 0.85;
+	}
+	.rostrocha-btn{
+		width: 160px;
+	}
+	.tovar-buy-bnt{
+		width: 160px;
+	}
+}
+
+
+.akcia{
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 45px;
+	margin-bottom: 55px;
+	position: relative;
+}
+
+.akcia__title{
+	font-size: 24px;
+	line-height: 22px;
+	margin-bottom: 5px;
+}
+.akcia__text{
+	font-size: 18px;
+	line-height: 28px;
+	color: #353535;
+	margin-bottom: 15px;
+}
+.akcia a{
+	font-size: 16px;
+	line-height: 22px;
+	color: #273A64;
+	text-decoration: none;
+}
+.akcia a:hover{
+	text-decoration: underline;
+}
+.akcia img{
+	position: absolute;
+	right: 130px;
+	top: 50%;
+	transform: translateY(-50%);
+	max-height: 95%;
+}
+.akcia__wrap{
+	max-width: 616px;
+}
+@media(max-width: 1199px){
+	.akcia img{
+		right: 15px;
+		max-width: 40%;
+	}
+	.akcia__wrap{
+		max-width: 560px;
+	}
+}
+@media(max-width: 991px){
+	.akcia{
+		display: none;
+	}
 }
