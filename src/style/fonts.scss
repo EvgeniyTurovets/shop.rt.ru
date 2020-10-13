@@ -108,7 +108,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-x:before {
+  content: "\e90d";
+  color: #767676;
+}
+.icon-v:before {
+  content: "\e90e";
+  color: #00b733;
+}
+.icon-tick-white:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-korzina:before {
+  content: "\e90b";
+  color: #fff;
+}
 .icon-arrow:before {
   content: "\e900";
 }
