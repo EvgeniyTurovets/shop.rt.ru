@@ -189,6 +189,7 @@ $(function(){
 			      });
 			    });
 			    myMap.geoObjects.add(myPlacemark);
+
 			    $('#myPlacemark2').hover(function(){
 			      myPlacemark.options.set({
 			       iconImageHref: '../img/mapmark.svg'
@@ -198,8 +199,9 @@ $(function(){
 			       iconImageHref: '../img/mapmark2.svg'
 			      });
 			    });
-			    myMap.geoObjects.add(myPlacemark);
-			    $('#myPlacemark2').hover(function(){
+			    myMap.geoObjects.add(myPlacemark2);
+
+			    $('#myPlacemark3').hover(function(){
 			      myPlacemark.options.set({
 			       iconImageHref: '../img/mapmark.svg'
 			      });
@@ -208,7 +210,7 @@ $(function(){
 			       iconImageHref: '../img/mapmark2.svg'
 			      });
 			    });
-			    myMap.geoObjects.add(myPlacemark);
+			    myMap.geoObjects.add(myPlacemark3);
         }
 
 })
