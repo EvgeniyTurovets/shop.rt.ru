@@ -606,6 +606,7 @@ button {
         margin-left: 10px;
         margin-right: 10px;
         width: 340px;
+        border-radius: 5px;
     }
     
 }
@@ -721,6 +722,9 @@ button {
     .section-slider__top a{
         top: 5px;
     }
+    .rekomend__right-abs{
+        right: 10px;
+    }
 }
 
 .rekomend__phone{
@@ -776,4 +780,5 @@ button {
     .rekomend__phone__wrap{
         padding-top: 50px;
     }
+    
 }

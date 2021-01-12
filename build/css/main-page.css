@@ -677,7 +677,8 @@ button {
     margin-left: 0;
     margin-left: 10px;
     margin-right: 10px;
-    width: 340px; }
+    width: 340px;
+    border-radius: 5px; }
 
 .section-slider__wrap.slick-slider {
   opacity: 1;
@@ -763,7 +764,9 @@ button {
     font-size: 16px;
     line-height: 21px; }
   .section-slider__top a {
-    top: 5px; } }
+    top: 5px; }
+  .rekomend__right-abs {
+    right: 10px; } }
 
 .rekomend__phone {
   text-decoration: none;
